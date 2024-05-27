@@ -20,7 +20,7 @@
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },  
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -38,5 +38,8 @@
   },
   "engines": {
     "node": ">=14.x"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }
