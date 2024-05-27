@@ -1,3 +1,11 @@
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
 .App {
   text-align: center;
 }
@@ -14,7 +22,9 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background: linear-gradient(270deg, #103783, #103783); 
+  background-size: 600% 600%;
+  animation: GradientAnimation 15s ease infinite;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,10 +32,41 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  position: relative; 
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  position: absolute;
+  top: 0; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  height: 80px; /* Adjust as needed */
+}
+
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  height: 50px;
+  width: 50px;
+  
 }
 
 @keyframes App-logo-spin {
@@ -34,5 +75,17 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes GradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
